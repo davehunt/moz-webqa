@@ -1,0 +1,23 @@
+{
+  "name": "moz-webqa",
+  "version": "1.0.0",
+  "description": "QA test job status board",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/potch/moz-webqa.git"
+  },
+  "author": "potch",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/potch/moz-webqa/issues"
+  },
+  "homepage": "https://github.com/potch/moz-webqa",
+  "dependencies": {
+    "express": "^4.12.4",
+    "request": "^2.57.0"
+  }
+}

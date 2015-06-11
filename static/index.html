@@ -1,0 +1,52 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <link rel="stylesheet" href="/style.css">
+  </head>
+  <body>
+    <h1>Mozilla QA Build Status</h1>
+    <ul>
+    </ul>
+    <script>
+      function update() {
+        var xhr = new XMLHttpRequest();
+        xhr.onload = function () {
+          var datal
+          try {
+            data = JSON.parse(this.responseText);
+          } catch (e) {
+            console.error(e);
+          }
+          if (data) {
+            render(data);
+          }
+        }
+        xhr.onerror = function() {
+          console.log('error');
+        }
+        xhr.open('get', '/update');
+        xhr.send();
+      }
+
+      function render(data) {
+        console.log('render', data);
+        var list = document.querySelector('ul');
+        list.innerHTML = '';
+        data.jobs.forEach(function (job) {
+          if (job.color === 'disabled') {
+            return;
+          }
+          var el = document.createElement('li');
+          el.innerHTML = job.name;
+          el.classList.add('status-' + job.color);
+          list.appendChild(el);
+        });
+      }
+
+      update();
+      setInterval(update, 10 * 1000);
+    </script>
+  </body>
+</html>
