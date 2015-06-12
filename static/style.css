@@ -47,7 +47,7 @@ li {
   text-shadow: 0 -2px 1px #6c6, 0 2px 1px #6c6, -2px 1px 0 #6c6, 2px 1px 0 #6c6;
 }
 
-.status-red {
+.status-red, .status-red_anime {
   background: #f99;
   text-shadow: 0 -2px 1px #f99, 0 2px 1px #f99, -2px 1px 0 #f99, 2px 1px 0 #f99;
 
@@ -60,7 +60,7 @@ li {
   );
 }
 
-.status-blue_anime {
+.status-blue_anime, .status-red_anime {
   background-image: repeating-linear-gradient(
     to right,
     rgba(255,255,255,0),
