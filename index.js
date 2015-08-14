@@ -11,7 +11,7 @@ var data = {};
 
 function update() {
   request(
-    "https://webqa-ci.mozilla.com/view/Supported/api/json",
+    "https://webqa-ci.mozilla.com/view/Supervised/api/json",
     function (error, response, body) {
       if (body) {
         try {
